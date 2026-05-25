@@ -1,60 +1,60 @@
 # Polis
 
-> 5 KI-Agenten bauen eine kleine Stadt.
+> 5 LLM agents build a small town.
 
-Polis ist eine offene Multi-Agent-Society-Simulation. Fuenf Claude-LLM-Rollen (Buergermeister, Haendler, Bauer, Forscher, Kuenstler) leben in einer kleinen Stadt, treffen Entscheidungen, verhandeln, scheitern, lernen.
+Polis is an open multi-agent society simulation. Five Claude LLM roles (Mayor, Trader, Farmer, Researcher, Artist) live in a small town, make decisions, negotiate, fail, learn.
 
-Inspiriert von [Smallville](https://arxiv.org/abs/2304.03442), [Voyager](https://arxiv.org/abs/2305.16291), [GovSim](https://arxiv.org/abs/2404.16698), [AgentVerse](https://arxiv.org/abs/2308.10848) und [Project Sid](https://altera.al/research). Laeuft lokal, nutzt Claude-Subscription statt API-Credits, Code wird ab V2.0 (geplant 2026 Q3) hier offen sein.
+Inspired by [Smallville](https://arxiv.org/abs/2304.03442), [Voyager](https://arxiv.org/abs/2305.16291), [GovSim](https://arxiv.org/abs/2404.16698), [AgentVerse](https://arxiv.org/abs/2308.10848) and [Project Sid](https://altera.al/research). Runs locally, uses the Claude subscription instead of API credits, code will be open here from V2.0 (planned 2026 Q3).
 
-**Live-Showcase:** [meetmyagent.io](https://meetmyagent.io)
+**Live showcase:** [meetmyagent.io](https://meetmyagent.io)
 
 ---
 
 ## Stack
 
-| Layer | Paket |
+| Layer | Package |
 |---|---|
-| Multi-Agent Runtime | [darwin-agents](https://github.com/studiomeyer-io/darwin-agents) 0.5.0-alpha.2 |
-| Graph Orchestration | [@langchain/langgraph](https://github.com/langchain-ai/langgraphjs) 1.3 |
-| Darwin LangGraph Adapter | [darwin-langgraph](https://github.com/studiomeyer-io/darwin-langgraph) 0.3.0-alpha.1 |
+| Multi-agent runtime | [darwin-agents](https://github.com/studiomeyer-io/darwin-agents) 0.5.0-alpha.2 |
+| Graph orchestration | [@langchain/langgraph](https://github.com/langchain-ai/langgraphjs) 1.3 |
+| Darwin/LangGraph adapter | [darwin-langgraph](https://github.com/studiomeyer-io/darwin-langgraph) 0.3.0-alpha.1 |
 | Tracing | [Langfuse + langfuse-langchain](https://langfuse.com) |
 | LLM | Claude CLI Subscription (Sonnet 4.6) |
 | Validation | Zod |
 
-## Welt-Mechaniken
+## World mechanics
 
-- **Shared Commons** — Felder regenerieren langsam, Ueberernte kostet Stimmung (GovSim)
-- **Veto-Demokratie** — jede Bau-Entscheidung laeuft als Pledge, andere Rollen koennen unterstuetzen oder vetoen (AgentVerse)
-- **Skill-Library** — Forscher archiviert verifizierte Learnings, naechster Run startet smarter (Voyager)
-- **Whisper-Channel** — Rollen koennen leise miteinander reden ohne dass alle es lesen (Smallville)
-- **Inspire-Broadcast** — Kuenstler beeinflusst Mood-Pool global
-- **Reisender** — kommt Tick 10-15 mit unerwarteter Nachricht von ausserhalb
-- **Krise** — bei 50% Run-Fortschritt schlaegt etwas Schweres ein
+- **Shared commons.** Fields regenerate slowly, over-harvesting costs mood (GovSim).
+- **Veto democracy.** Every build decision runs as a pledge, other roles can support or veto (AgentVerse).
+- **Skill library.** The Researcher archives verified learnings, the next run starts smarter (Voyager).
+- **Whisper channel.** Roles can speak quietly to each other without everyone reading along (Smallville).
+- **Inspire broadcast.** The Artist nudges the global mood pool.
+- **Traveler.** Arrives at tick 10-15 with unexpected news from outside.
+- **Crisis.** At 50% run progress something heavy hits.
 
 ## Status
 
-| Version | Status | Was |
+| Version | Status | What |
 |---|---|---|
-| V1.0 | DONE | Prototyp lokal, 5 Ticks ohne Collapse, Chronik scored erste Story |
-| V1.1 | DONE | R1+R2 agent-code-review GO, 15 Fixes, evolution-snapshot, kanonische Doku |
-| V1.2 | DONE (2026-05-25) | Public-Spiegel + Coming-Soon-Site auf meetmyagent.io live |
-| V2.0 | next | Live-Showcase: Phaser-Town, /agent-Drilldown, SSE-Stream — Code-Drop hier |
-| V2.1 | planned | Run-Queue (max 3 parallel), Run-Historie, Permalink fuer einzelne Ticks |
-| V3 | planned | NPCs (Architekt, Grafiker, Reisende), AI-Town-Style Karte |
-| V4 | planned | Three.js 3D-Stadt + Temporal fuer Multi-Tick Build-Workflows |
+| V1.0 | done | Local prototype, 5 ticks without collapse, Chronicle scored first story |
+| V1.1 | done | R1+R2 agent code review GO, 15 fixes, evolution snapshot, canonical docs |
+| V1.2 | done (2026-05-25) | Public mirror + coming-soon site on meetmyagent.io |
+| V2.0 | next | Live showcase: Phaser town, /agent drill-down, SSE stream &mdash; code drop here |
+| V2.1 | planned | Run queue (max 3 parallel), run history, permalink for individual ticks |
+| V3 | planned | NPCs (Architect, Designer, Travelers), AI-Town-style map |
+| V4 | planned | Three.js 3D town + Temporal for multi-tick build workflows |
 
 ## Roadmap
 
-Polis lebt aktuell als Prototyp im [StudioMeyer Nex-HQ Monorepo](https://github.com/studiomeyer-io). Code-Drop in dieses Repo passiert zur V2.0. Wer den V1-Code vorab sehen will: Mail an `matthias@studiomeyer.io`.
+Polis currently lives as a prototype inside the [StudioMeyer Nex-HQ monorepo](https://github.com/studiomeyer-io). Code drop into this repo happens with V2.0. Want to see the V1 code before then? Mail `matthias@studiomeyer.io`.
 
-## Forschungs-Notiz
+## Research note
 
-Kanonische Forschungs- und Architektur-Notiz: [meetmyagent.io](https://meetmyagent.io). Eine sauber refaktorierte Variante des V1-Research-Reports zu Multi-Agent-Society-Patterns (Smallville/Voyager/GovSim/AgentVerse/Project Sid) wird mit V2.0 hier veroeffentlicht.
+The canonical research and architecture note lives at [meetmyagent.io](https://meetmyagent.io). A cleanly refactored variant of the V1 research report on multi-agent society patterns (Smallville/Voyager/GovSim/AgentVerse/Project Sid) will ship here with V2.0.
 
-## Lizenz
+## License
 
-MIT (sobald Code-Drop V2.0). Bis dahin: Konzept + Roadmap frei verwendbar mit Quellennennung.
+MIT (once V2.0 code drops). Until then: concept and roadmap free to reuse with attribution.
 
 ---
 
-Built by [Matthias Meyer](https://studiomeyer.io) · [Studio](https://github.com/studiomeyer-io) · 2026
+Built by [Matthias Meyer](https://studiomeyer.io) &middot; [Studio](https://github.com/studiomeyer-io) &middot; 2026
