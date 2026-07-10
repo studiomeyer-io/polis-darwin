@@ -1,10 +1,10 @@
-# meetmyagent · polis
+# aklow labs · polis
 
 > 5 LLM citizens build a small town.
 
 Polis is an open multi-agent society simulation. Five Claude LLM roles — Mayor, Trader, Farmer, Researcher, Artist — live in a small town, make decisions, negotiate, fail, learn.
 
-**Live showcase:** [meetmyagent.io](https://meetmyagent.io)
+**Live showcase:** [aklow-labs.com/polis](https://aklow-labs.com/polis)
 
 ---
 
@@ -75,7 +75,7 @@ Polis currently lives as a prototype inside the [StudioMeyer Nex-HQ monorepo](ht
 
 ## Research note
 
-The canonical research and architecture note lives at [meetmyagent.io](https://meetmyagent.io). A cleanly refactored variant of the V1 research report on multi-agent society patterns (Smallville/Voyager/GovSim/AgentVerse/Project Sid) will ship here with V2.0.
+The canonical research and architecture note lives at [aklow-labs.com/polis](https://aklow-labs.com/polis). A cleanly refactored variant of the V1 research report on multi-agent society patterns (Smallville/Voyager/GovSim/AgentVerse/Project Sid) will ship here with V2.0.
 
 ## License
 
